@@ -2,7 +2,7 @@
   NPM_FLAGS = "--version"
 
 [build]
-  command = "npm run build"
+  command = "npx pnpm install --store=node_modules/.pnpm-store && npx pnpm build"
   ignore = "git diff --quiet $COMMIT_REF $CACHED_COMMIT_REF -- /"
 
   [[redirects]]
