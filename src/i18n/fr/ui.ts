@@ -6,7 +6,7 @@ export default UIDictionary({
 	// Site settings
 	'site.title': 'Documentation OxyProps',
 	'site.description': 'Utilisez la puissance des propriétés CSS personnalisées dans Oxygen Buidler.',
-	'site.og.imageSrc': '/default-og-image.png?v=1',
+	'site.og.imageSrc': '/default-og-image.jpg?v=1',
 	'site.og.imageAlt': "Logo d'Astro dans l'espace, avec une planète violette dans le style de saturne flottant à droite de l'image.",
 	// Left Sidebar
 	'leftSidebar.a11yTitle': 'Navigation du site',
@@ -22,6 +22,7 @@ export default UIDictionary({
 	'rightSidebar.joinDiscord': 'Nous rejoindre sur Discord',
 	'rightSidebar.readBlog': 'Lire nos article de blog',
 	'rightSidebar.openCollective': 'Notre Collective',
+	'rightSidebar.youtube': 'Nos tutoriels vidéo',
 	'rightSidebar.contribute': 'Contribuer',
 	'rightSidebar.editPage': 'Modifier cette page',
 	'rightSidebar.translatePage': 'Traduire cette page',

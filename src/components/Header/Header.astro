@@ -35,13 +35,14 @@ const t = useTranslations(Astro);
 				DOCS
 			</a>
 		</div>
-			<ThemeToggleButton 
-				client:visible 
-				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
-				isInsideHeader={true} 
-			/>
+
 		{lang && <LanguageSelect lang={lang} client:idle />}
-		<Search {lang} client:idle labels={docsearchStrings} />
+		<!-- <Search {lang} client:idle labels={docsearchStrings} /> -->
+		<ThemeToggleButton 
+		client:visible 
+		labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+		isInsideHeader={true} 
+	/>
 		<SidebarToggle client:idle />
 	</nav>
 </header>

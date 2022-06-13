@@ -2,6 +2,7 @@
 import TableOfContents from './TableOfContents';
 import ContributeMenu from './ContributeMenu.astro';
 import CommunityMenu from './CommunityMenu.astro';
+import FeedBackMenu from './FeedBackMenu.astro';
 import { useTranslations } from "../../i18n/util";
 
 const t = useTranslations(Astro);
@@ -19,6 +20,7 @@ const headers = content.astro?.headers;
 				labels={{ onThisPage: t('rightSidebar.onThisPage'), overview: t('rightSidebar.overview') }}
 			/>
 		)}
+		<FeedBackMenu />
 		<ContributeMenu editHref={githubEditUrl} />
 		<CommunityMenu />
 	</div>

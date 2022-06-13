@@ -9,7 +9,7 @@ export default NavDictionary({
 	'comparing-oxyprops-vs-other-plugins': 'Oxyprops vs. X',
 
 	// Core Concepts
-	coreConcepts: 'Concepts Fondamentaux',
+	coreConcepts: 'Concepts Clés',
 	'core-concepts/css-custom-properties': 'Propriétés CSS personnalisées',
 
 	// Basics

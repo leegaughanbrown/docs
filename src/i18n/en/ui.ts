@@ -4,7 +4,7 @@ export default {
 	// Site settings
 	'site.title': 'OxyProps Documentation',
 	'site.description': 'Bring the power of CSS Custom Properties to Oxygen Buidler.',
-	'site.og.imageSrc': '/default-og-image.png?v=1',
+	'site.og.imageSrc': '/default-og-image.jpg?v=1',
 	'site.og.imageAlt': 'astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground',
 	// Left Sidebar
 	'leftSidebar.a11yTitle': 'Site Navigation',
@@ -13,17 +13,26 @@ export default {
 	'leftSidebar.noTranslations': 'No Translations Found',
 	'leftSidebar.viewInEnglish': 'View in English',
 	// Right Sidebar
-	'rightSidebar.a11yTitle': 'Table of Contents',
-	'rightSidebar.onThisPage': 'On this page',
-	'rightSidebar.overview': 'Overview',
-	'rightSidebar.community': 'Community',
-	'rightSidebar.joinDiscord': 'Join us on Discord',
-	'rightSidebar.readBlog': 'Read our blog posts',
-	'rightSidebar.openCollective': 'Our Open Collective',
-	'rightSidebar.contribute': 'Contribute',
-	'rightSidebar.editPage': 'Edit this page',
-	'rightSidebar.translatePage': 'Translate this page',
-	'rightSidebar.github': 'Astro Docs on GitHub',
+		// TOC
+		'rightSidebar.a11yTitle': 'Table of Contents',
+		'rightSidebar.onThisPage': 'On this page',
+		'rightSidebar.overview': 'Overview',
+		// Feedback
+		'rightSidebar.feedback': 'Feedback',
+		'rightSidebar.roadmap': 'OxyProps Roadmap',
+		'rightSidebar.idea': 'Suggest an idea',
+		'rightSidebar.bug': 'Report a bug',
+		// Contribute
+		'rightSidebar.contribute': 'Contribute',
+		'rightSidebar.editPage': 'Edit this page',
+		'rightSidebar.translatePage': 'Translate this page',
+		// Community
+		'rightSidebar.community': 'Community',
+		'rightSidebar.joinDiscord': 'Join us on Discord',
+		'rightSidebar.readBlog': 'Read our blog posts',
+		'rightSidebar.openCollective': 'Our Open Collective',
+		'rightSidebar.youtube': 'Watch our tutorials',
+		'rightSidebar.github': 'OxyProps Docs on GitHub',
 	// `<ThemeToggleButton>` acessibility labels
 	'themeToggle.useLight': 'Use light theme',
 	'themeToggle.useDark': 'Use dark theme',

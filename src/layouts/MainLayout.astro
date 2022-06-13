@@ -19,6 +19,8 @@ const formatTitle = (content) => (content.title ? `${content.title} | ${t('site.
 const lang = getLanguageFromURL(url.pathname);
 const canonicalURL = new URL(Astro.canonicalURL);
 if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/`, '/en/');
+
+console.log('Astro site info', Astro.site);
 ---
 
 <html dir={content.dir ?? 'ltr'} {lang} class="initial">

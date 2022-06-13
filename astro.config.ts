@@ -30,9 +30,8 @@ const createSROnlyLabel = (text: string) => {
 	return node;
 };
 
-// https://astro.build/config
 export default defineConfig({
-	site: 'https://docs.astro.build/',
+	site: 'https://docs.oxyprops.com/',
 	integrations: [preact(), react(), sitemap()],
 	markdown: {
 		syntaxHighlight: 'shiki',

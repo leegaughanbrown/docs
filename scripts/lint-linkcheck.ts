@@ -64,7 +64,7 @@ class LinkChecker {
 
 // Use our class to check for link issues
 const linkChecker = new LinkChecker({
-	baseUrl: 'https://docs.astro.build',
+	baseUrl: 'https://docs.oxyprops.com/',
 	buildOutputDir: './dist',
 	pageSourceDir: './src/pages',
 	checks: [
