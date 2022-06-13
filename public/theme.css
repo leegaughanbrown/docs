@@ -1,149 +1,196 @@
 :root {
-	--font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-	--font-body: system-ui, var(--font-fallback);
-	--font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-		'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+	--o-font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+	--o-font-serif: ui-serif, serif;
+	--o-font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+	--o-font-body: var(--o-font-sans);
+	--o-font-size-fluid-00:clamp(.5rem,1vw,0.75rem);
+	--o-font-size-fluid-0:clamp(.75rem,2vw,1rem);
+	--o-font-size-fluid-1:clamp(1rem,3vw,1.5rem);
+	--o-font-size-fluid-2:clamp(1.5rem,4vw,2.5rem);
+	--o-font-size-fluid-3:clamp(2rem,5vw,3.5rem);
+	--o-font-size-fluid-4:clamp(2.5rem,6vw,4.5rem);
+	--o-font-size-fluid-5:clamp(3rem,8vw,5.5rem);
+
+	--o-font-weight-1:100;
+	--o-font-weight-2:200;
+	--o-font-weight-3:300;
+	--o-font-weight-4:400;
+	--o-font-weight-5:500;
+	--o-font-weight-6:600;
+	--o-font-weight-7:700;
+	--o-font-weight-8:800;
+	--o-font-weight-9:900;
+	--o-font-lineheight-00:.95;
+	--o-font-lineheight-0:1.1;
+	--o-font-lineheight-1:1.25;
+	--o-font-lineheight-2:1.375;
+	--o-font-lineheight-3:1.5;
+	--o-font-lineheight-4:1.75;
+	--o-font-lineheight-5:2;
+
+	--o-size-content-1:20ch;
+	--o-size-content-2:45ch;
+	--o-size-content-3:60ch;
+	--o-size-header-1:20ch;
+	--o-size-header-2:25ch;
+	--o-size-header-3:35ch;
 
 	/*
-   * Variables with --color-base prefix define
+   * Variables with --o-color-base prefix define
    * the hue, and saturation values to be used for
    * hsla colors.
    *
    * ex:
    *
-   * --color-base-{color}: {hue}, {saturation};
+   * --o-color-base-{color}: {hue}, {saturation};
    *
    */
 
-	--color-base-white: 0, 0%;
-	--color-base-black: 240, 100%;
-	--color-base-gray: 250, 14%;
-	--color-base-blue: 212, 100%;
-	--color-base-blue-dark: 212, 72%;
-	--color-base-green: 158, 79%;
-	--color-base-orange: 22, 100%;
-	--color-base-purple: 269, 79%;
-	--color-base-red: 351, 100%;
-	--color-base-yellow: 41, 100%;
+    --o-color-base-zinc: 240, 4%;
+	--o-color-base-gold: 38, 92%;
+	--o-color-base-lime: 84, 81%;
+	--o-color-base-teal: 173, 80%;
+
+	--o-color-base-white: 0, 0%;
+	--o-color-base-black: 240, 100%;
+	--o-color-base-blue: 212, 100%;
+	--o-color-base-blue-dark: 212, 72%;
+	--o-color-base-green: 158, 79%;
+	--o-color-base-purple: 269, 79%;
+	--o-color-base-red: 351, 100%;
+	--o-color-base-yellow: 41, 100%;
 
 	/*
-   * Color palettes are made using --color-base 
+   * Color palettes are made using --o-color-base 
    * variables, along with a lightness value to
    * define different variants.
    *
    */
 
-	--color-gray-5: var(--color-base-gray), 5%;
-	--color-gray-10: var(--color-base-gray), 10%;
-	--color-gray-20: var(--color-base-gray), 20%;
-	--color-gray-30: var(--color-base-gray), 30%;
-	--color-gray-40: var(--color-base-gray), 40%;
-	--color-gray-50: var(--color-base-gray), 50%;
-	--color-gray-60: var(--color-base-gray), 60%;
-	--color-gray-70: var(--color-base-gray), 70%;
-	--color-gray-80: var(--color-base-gray), 80%;
-	--color-gray-90: var(--color-base-gray), 90%;
-	--color-gray-95: var(--color-base-gray), 95%;
+	--o-color-zinc-5: var(--o-color-base-zinc), 5%;
+	--o-color-zinc-10: var(--o-color-base-zinc), 10%;
+	--o-color-zinc-20: var(--o-color-base-zinc), 20%;
+	--o-color-zinc-30: var(--o-color-base-zinc), 30%;
+	--o-color-zinc-40: var(--o-color-base-zinc), 40%;
+	--o-color-zinc-50: var(--o-color-base-zinc), 50%;
+	--o-color-zinc-60: var(--o-color-base-zinc), 60%;
+	--o-color-zinc-70: var(--o-color-base-zinc), 70%;
+	--o-color-zinc-80: var(--o-color-base-zinc), 80%;
+	--o-color-zinc-90: var(--o-color-base-zinc), 90%;
+	--o-color-zinc-95: var(--o-color-base-zinc), 95%;
+	
+	--o-color-gold: var(--o-color-base-gold), 50%;
+	--o-color-lime: var(--o-color-base-lime), 30%;
+	--o-color-teal: var(--o-color-base-teal), 30%;
 
-	--color-blue: var(--color-base-blue), 61%;
-	--color-blue-dark: var(--color-base-blue-dark), 39%;
-	--color-green: var(--color-base-green), 42%;
-	--color-orange: var(--color-base-orange), 50%;
-	--color-purple: var(--color-base-purple), 54%;
-	--color-red: var(--color-base-red), 54%;
-	--color-yellow: var(--color-base-yellow), 59%;
+	--o-color-blue: var(--o-color-base-blue), 61%;
+	--o-color-blue-dark: var(--o-color-base-blue-dark), 39%;
+	--o-color-green: var(--o-color-base-green), 42%;
+	--o-color-purple: var(--o-color-base-purple), 54%;
+	--o-color-red: var(--o-color-base-red), 54%;
+	--o-color-yellow: var(--o-color-base-yellow), 59%;
 }
 
 :root {
 	color-scheme: light;
-	--theme-accent: hsla(var(--color-orange), 1);
-	--theme-accent-secondary: hsl(324, 75%, 38%);
-	--theme-dim: hsla(var(--color-gray-70), 1);
-	--theme-dim-light: hsla(var(--color-gray-80), 1);
-	--theme-dim-lighter: hsla(var(--color-gray-90), 1);
-	--theme-accent-opacity: 0.1;
-	--theme-divider: hsla(var(--color-purple), 0.1);
-	--theme-shade-subtle: hsla(var(--color-purple), 0.3);
-	--theme-text: hsla(var(--color-gray-10), 1);
-	--theme-text-light: hsla(var(--color-gray-30), 1);
-	--theme-text-lighter: hsla(var(--color-gray-40), 1);
-	--theme-bg: hsl(273, 37%, 93%);
-	--theme-bg-gradient-top: var(--theme-bg);
-	--theme-bg-gradient-bottom: #fdfeff;
-	--theme-bg-hover: hsla(var(--color-purple), 0.075);
-	--theme-bg-offset: hsla(var(--color-purple), 0.1);
-	--theme-bg-accent: hsla(var(--color-purple), var(--theme-accent-opacity));
-	--theme-code-inline-bg: hsla(var(--color-purple), .1);
-	--theme-code-inline-text: var(--theme-text);
-	--theme-code-bg: hsla(257, 31%, 22%, 1);
-	--theme-code-text: hsla(var(--color-gray-95), 1);
-	--theme-navbar-bg: var(--theme-bg);
-	--theme-navbar-height: 6rem;
-	--theme-selection-color: hsla(var(--color-purple), 1);
-	--theme-selection-bg: hsla(var(--color-purple), var(--theme-accent-opacity));
+	--o-theme-accent: hsla(var(--o-color-gold), 1);
+	--o-theme-accent-secondary: hsla(var(--o-color-lime), 1);
 
-	--theme-bg-gradient: fixed linear-gradient(180deg, var(--theme-bg-gradient-top), var(--theme-bg-gradient-top) var(--theme-navbar-height), var(--theme-bg-gradient-bottom));
+	--o-theme-dim: hsla(var(--o-color-zinc-70), 1);
+	--o-theme-dim-light: hsla(var(--o-color-zinc-80), 1);
+	--o-theme-dim-lighter: hsla(var(--o-color-zinc-90), 1);
+	
+	--o-theme-accent-opacity: 0.3;
+	
+	--o-theme-divider: hsla(var(--o-color-teal), 0.1);
+	--o-theme-shade-subtle: hsla(var(--o-color-teal), 0.3);
+	
+	--o-theme-text: hsla(var(--o-color-zinc-10), 1);
+	--o-theme-text-light: hsla(var(--o-color-zinc-30), 1);
+	--o-theme-text-lighter: hsla(var(--o-color-zinc-40), 1);
 
-	--theme-glow-highlight: transparent;
-	--theme-glow-diffuse: hsla(var(--color-base-purple), 65%, 0.5);
-	--theme-glow-blur: 10px;
+	--o-theme-bg: hsl(273, 37%, 93%);
+	--o-theme-bg-gradient-top: var(--o-theme-bg);
+	--o-theme-bg-gradient-bottom: #fdfeff;
+	--o-theme-bg-hover: hsla(var(--o-color-teal), 0.075);
+	--o-theme-bg-offset: hsla(var(--o-color-teal), 0.1);
+	--o-theme-bg-accent: hsla(var(--o-color-teal), var(--o-theme-accent-opacity));
+	--o-theme-code-inline-bg: hsla(var(--o-color-teal), .1);
+	--o-theme-code-inline-text: var(--o-theme-text);
+	--o-theme-code-bg: hsla(257, 31%, 22%, 1);
+	--o-theme-code-text: hsla(var(--o-color-zinc-95), 1);
+	--o-theme-navbar-bg: var(--o-theme-bg);
+	--o-theme-navbar-height: 6rem;
+	--o-theme-selection-color: hsla(var(--o-color-teal), 1);
+	--o-theme-selection-bg: hsla(var(--o-color-teal), var(--o-theme-accent-opacity));
+
+	--o-theme-bg-gradient: fixed linear-gradient(180deg, var(--o-theme-bg-gradient-top), var(--o-theme-bg-gradient-top) var(--o-theme-navbar-height), var(--o-theme-bg-gradient-bottom));
+
+	--o-theme-glow-highlight: transparent;
+	--o-theme-glow-diffuse: hsla(var(--o-color-base-teal), 65%, 0.5);
+	--o-theme-glow-blur: 10px;
 }
 
 body {
-	background: var(--theme-bg-gradient);
-	color: var(--theme-text);
+	background: var(--o-theme-bg-gradient);
+	color: var(--o-theme-text);
 }
 
 :root.theme-dark {
 	color-scheme: dark;
-	/* We lighten-up the orange in dark mode, to help with link contrast. */
-	--color-orange: var(--color-base-orange), 60%;
-	--theme-accent-opacity: 0.4;
-	--theme-accent: hsla(var(--color-orange), 1);
-	--theme-accent-secondary: hsla(var(--color-orange), 1);
-	--theme-text-accent: hsla(var(--color-orange), 1);
-	--theme-dim: hsla(var(--color-gray-90), 0.3);
-	--theme-dim-light: hsla(var(--color-gray-90), 0.2);
-	--theme-dim-lighter: hsla(var(--color-gray-90), 0.1);
-	--theme-divider: hsla(var(--color-gray-95), 0.1);
-	--theme-shade-subtle: hsla(var(--color-gray-95), 0.4);
-	--theme-text: hsla(var(--color-gray-90), 1);
-	--theme-text-light: hsla(var(--color-gray-80), 1);
-	--theme-text-lighter: hsla(var(--color-gray-70), 1);
-	--theme-bg: hsl(256, 27%, 19%);
-	--theme-bg-gradient-top: var(--theme-bg);
-	--theme-bg-gradient-bottom: hsl(251, 29%, 11%);
-	--theme-bg-hover: hsla(var(--color-purple), 0.2);
-	--theme-bg-offset: #0008;
-	--theme-code-inline-bg: #FFFFFF16;
-	--theme-code-inline-text: var(--theme-text-light);
-	--theme-code-bg: #0008;
-	--theme-code-text: hsla(var(--color-base-white), 100%, 1);
-	--theme-navbar-bg: var(--theme-bg);
-	--theme-selection-color: hsla(var(--color-base-white), 100%, 1);
-	--theme-selection-bg: hsla(var(--color-purple), var(--theme-accent-opacity));
+	/* We lighten-up the gold in dark mode, to help with link contrast. */
+	--o-color-gold: var(--o-color-base-gold), 60%;
+	--o-color-teal: var(--o-color-base-teal), 60%;
+	--o-theme-accent-opacity: 0.4;
+	--o-theme-accent: hsla(var(--o-color-gold), 1);
+	--o-theme-accent-secondary: hsla(var(--o-color-gold), 1);
+	--o-theme-text-accent: hsla(var(--o-color-gold), 1);
 
-	--theme-glow-highlight: hsla(var(--color-base-purple), 50%, 1);
+	--o-theme-dim: hsla(var(--o-color-zinc-90), 0.3);
+	--o-theme-dim-light: hsla(var(--o-color-zinc-90), 0.2);
+	--o-theme-dim-lighter: hsla(var(--o-color-zinc-90), 0.1);
+	--o-theme-divider: hsla(var(--o-color-zinc-95), 0.1);
+	--o-theme-shade-subtle: hsla(var(--o-color-zinc-95), 0.4);
+	
+	--o-theme-text: hsla(var(--o-color-zinc-90), 1);
+	--o-theme-text-light: hsla(var(--o-color-zinc-80), 1);
+	--o-theme-text-lighter: hsla(var(--o-color-zinc-70), 1);
+	
+	--o-theme-bg: hsl(var(--o-color-base-zinc), 19%);
+	--o-theme-bg-gradient-top: var(--o-theme-bg);
+	--o-theme-bg-gradient-bottom: hsl(var(--o-color-base-zinc), 11%);
+
+	--o-theme-bg-hover: hsla(var(--o-color-teal), 0.2);
+	--o-theme-bg-offset: #0008;
+	--o-theme-code-inline-bg: #FFFFFF16;
+	--o-theme-code-inline-text: var(--o-theme-text-light);
+	--o-theme-code-bg: #0008;
+	--o-theme-code-text: hsla(var(--o-color-base-white), 100%, 1);
+	--o-theme-navbar-bg: var(--o-theme-bg);
+	--o-theme-selection-color: hsla(var(--o-color-base-white), 100%, 1);
+	--o-theme-selection-bg: hsla(var(--o-color-teal), var(--o-theme-accent-opacity));
+
+	--o-theme-glow-highlight: hsla(var(--o-color-base-teal), 50%, 1);
 
 	/* DocSearch [Algolia] */
-	--docsearch-primary-color: var(--theme-accent);
-	--docsearch-modal-background: var(--theme-bg-gradient-top);
-	--docsearch-searchbox-focus-background: var(--theme-bg-offset);
-	--docsearch-footer-background: var(--theme-bg-gradient-bottom);
-	--docsearch-text-color: var(--theme-text);
-	--docsearch-hit-background: var(--theme-bg-offset);
-	--docsearch-hit-shadow: none;
-	--docsearch-hit-color: var(--theme-text);
-	--docsearch-footer-shadow: inset 0 -1px 0 var(--theme-glow-highlight), inset 1px 0px 0 var(--theme-glow-highlight), inset -1px 0px 0 var(--theme-glow-highlight),
-		inset 0 calc(-1 * var(--theme-glow-blur)) var(--theme-glow-blur) calc(-1 * var(--theme-glow-blur)) var(--theme-glow-diffuse),
-		inset calc(-1 * var(--theme-glow-blur)) 0 var(--theme-glow-blur) calc(-1 * var(--theme-glow-blur)) var(--theme-glow-diffuse),
-		inset var(--theme-glow-blur) 0 var(--theme-glow-blur) calc(-1 * var(--theme-glow-blur)) var(--theme-glow-diffuse);
-	--docsearch-modal-shadow: 0 0 var(--theme-glow-blur) var(--theme-glow-diffuse), inset 0 0 0 1px var(--theme-glow-highlight),
-		inset 0 0 var(--theme-glow-blur) var(--theme-glow-diffuse);
-	--docsearch-container-background: hsla(var(--color-gray-10), 0.8);
+	--o-docsearch-primary-color: var(--o-theme-accent);
+	--o-docsearch-modal-background: var(--o-theme-bg-gradient-top);
+	--o-docsearch-searchbox-focus-background: var(--o-theme-bg-offset);
+	--o-docsearch-footer-background: var(--o-theme-bg-gradient-bottom);
+	--o-docsearch-text-color: var(--o-theme-text);
+	--o-docsearch-hit-background: var(--o-theme-bg-offset);
+	--o-docsearch-hit-shadow: none;
+	--o-docsearch-hit-color: var(--o-theme-text);
+	--o-docsearch-footer-shadow: inset 0 -1px 0 var(--o-theme-glow-highlight), inset 1px 0px 0 var(--o-theme-glow-highlight), inset -1px 0px 0 var(--o-theme-glow-highlight),
+		inset 0 calc(-1 * var(--o-theme-glow-blur)) var(--o-theme-glow-blur) calc(-1 * var(--o-theme-glow-blur)) var(--o-theme-glow-diffuse),
+		inset calc(-1 * var(--o-theme-glow-blur)) 0 var(--o-theme-glow-blur) calc(-1 * var(--o-theme-glow-blur)) var(--o-theme-glow-diffuse),
+		inset var(--o-theme-glow-blur) 0 var(--o-theme-glow-blur) calc(-1 * var(--o-theme-glow-blur)) var(--o-theme-glow-diffuse);
+	--o-docsearch-modal-shadow: 0 0 var(--o-theme-glow-blur) var(--o-theme-glow-diffuse), inset 0 0 0 1px var(--o-theme-glow-highlight),
+		inset 0 0 var(--o-theme-glow-blur) var(--o-theme-glow-diffuse);
+	--o-docsearch-container-background: hsla(var(--o-color-zinc-10), 0.8);
 }
 
 ::selection {
-	color: var(--theme-selection-color);
-	background-color: var(--theme-selection-bg);
+	color: var(--o-theme-selection-color);
+	background-color: var(--o-theme-selection-bg);
 }
