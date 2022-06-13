@@ -107,16 +107,16 @@ const contributors = await getContributors(githubRepo);
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		background-color: var(--theme-bg);
+		background-color: var(--o-theme-bg);
 		box-shadow:
-			0 0 0 var(--avatar-outline-width) var(--theme-divider),
-			0 0 0 var(--avatar-outline-offset) var(--theme-bg),
-			0 0 0 calc(var(--avatar-outline-offset) + var(--avatar-outline-width)) var(--theme-divider),
-			0 0 calc(var(--theme-glow-blur) + var(--avatar-outline-offset)) var(--theme-glow-diffuse);
+			0 0 0 var(--avatar-outline-width) var(--o-theme-divider),
+			0 0 0 var(--avatar-outline-offset) var(--o-theme-bg),
+			0 0 0 calc(var(--avatar-outline-offset) + var(--avatar-outline-width)) var(--o-theme-divider),
+			0 0 calc(var(--o-theme-glow-blur) + var(--avatar-outline-offset)) var(--o-theme-glow-diffuse);
 	}
 
 	.avatar-list a:focus {
-		outline: 2px solid var(--theme-accent);
+		outline: 2px solid var(--o-theme-accent);
 		outline-offset: var(--avatar-outline-offset);
 	}
 </style>

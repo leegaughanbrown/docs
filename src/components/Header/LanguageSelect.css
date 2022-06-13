@@ -1,5 +1,5 @@
 .language-select-wrapper {
-	color: var(--theme-text-light);
+	color: var(--o-theme-text-light);
 	position: relative;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .language-select {
-	--background-color-default: var(--theme-bg);
+	--background-color-default: var(--o-theme-bg);
 	width: 100%;
 	flex-grow: 1;
 	padding: 0.55em 1.75rem;
@@ -52,7 +52,7 @@
 	}
 	/* Assign a fixed color to options to keep them visible in the dropdown in Firefox */
 	.language-select option {
-		color: var(--theme-text-light);
+		color: var(--o-theme-text-light);
 	}
 }
 

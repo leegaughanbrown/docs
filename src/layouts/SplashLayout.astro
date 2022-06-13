@@ -17,19 +17,19 @@ const t = useTranslations(Astro);
 			body {
 				width: 100%;
 				display: grid;
-				grid-template-rows: var(--theme-navbar-height) 1fr;
+				grid-template-rows: var(--o-theme-navbar-height) 1fr;
 			}
 			.layout {
 				display: grid;
 				grid-auto-flow: column;
 				grid-template-columns:
-					minmax(var(--gutter), 1fr)
-					minmax(0, var(--max-width))
-					minmax(var(--gutter), 1fr);
+					minmax(var(--o-gutter), 1fr)
+					minmax(0, var(--o-max-width))
+					minmax(var(--o-gutter), 1fr);
 				overflow-x: hidden;
 			}
 			article {
-				padding: var(--doc-padding) var(--gutter);
+				padding: var(--o-doc-padding) var(--o-gutter);
 				grid-column: 2;
 				display: flex;
 				flex-direction: column;

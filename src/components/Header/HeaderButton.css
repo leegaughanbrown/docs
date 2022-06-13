@@ -1,9 +1,9 @@
 .header-button {
 	--background-color-default: transparent;
-	--border-color-default: var(--theme-shade-subtle);
-	--border-color-hocus: var(--theme-text-light);
-	--text-color-default: var(--theme-text-light);
-	--text-color-hocus: var(--theme-text);
+	--border-color-default: var(--o-theme-shade-subtle);
+	--border-color-hocus: var(--o-theme-text-light);
+	--text-color-default: var(--o-theme-text-light);
+	--text-color-hocus: var(--o-theme-text);
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0.8rem;

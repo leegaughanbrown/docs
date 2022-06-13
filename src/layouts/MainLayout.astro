@@ -13,9 +13,9 @@ const isFallback = !!Astro.params.fallback;
 const url = new URL(Astro.request.url);
 const currentPage = url.pathname;
 const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
-const githubEditUrl = `https://github.com/withastro/docs/blob/main/${currentFile}`;
+const githubEditUrl = `https://github.com/oxyprops/docs/blob/main/${currentFile}`;
 const t = useTranslations(Astro);
-const formatTitle = (content) => (content.title ? `${content.title} 🚀 ${t('site.title')}` : t('site.title'));
+const formatTitle = (content) => (content.title ? `${content.title} | ${t('site.title')}` : t('site.title'));
 const lang = getLanguageFromURL(url.pathname);
 const canonicalURL = new URL(Astro.canonicalURL);
 if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/`, '/en/');
@@ -30,15 +30,15 @@ if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/
 			body {
 				width: 100%;
 				display: grid;
-				grid-template-rows: var(--theme-navbar-height) 1fr;
+				grid-template-rows: var(--o-theme-navbar-height) 1fr;
 			}
 			.layout {
 				display: grid;
 				grid-auto-flow: column;
 				grid-template-columns:
-					minmax(var(--gutter), 1fr)
-					minmax(0, var(--max-width))
-					minmax(var(--gutter), 1fr);
+					minmax(var(--o-gutter), 1fr)
+					minmax(0, var(--o-max-width))
+					minmax(var(--o-gutter), 1fr);
 				overflow-x: hidden;
 			}
 			.layout :global(> *) {
@@ -53,12 +53,12 @@ if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/
 			}
 			#grid-left {
 				position: fixed;
-				background: var(--theme-bg-gradient);
+				background: var(--o-theme-bg-gradient);
 				z-index: 10;
 				display: none;
 			}
 			#grid-main {
-				padding: var(--doc-padding) var(--gutter);
+				padding: var(--o-doc-padding) var(--o-gutter);
 				grid-column: 2;
 				display: flex;
 				flex-direction: column;
@@ -76,7 +76,7 @@ if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/
 				}
 				:global(.mobile-sidebar-toggle #grid-left) {
 					display: block;
-					top: var(--theme-navbar-height);
+					top: var(--o-theme-navbar-height);
 					bottom: 0;
 					height: initial;
 				}
@@ -87,7 +87,7 @@ if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/
 					overflow: initial;
 					grid-template-columns:
 						20rem
-						minmax(0, var(--max-width));
+						minmax(0, var(--o-max-width));
 					gap: 1em;
 				}
 				#grid-left {
