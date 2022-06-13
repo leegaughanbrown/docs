@@ -64,8 +64,6 @@ Please only add new text content to the docs **in English**, only modifying **`.
 
 Speak another language natively? You can help with translating or reviewing translations!
 
-Check out the dedicated [i18n guide](src/i18n/README.md) for more details.
-
 ## Develop
 
 To begin developing locally, checkout this project from your machine.
