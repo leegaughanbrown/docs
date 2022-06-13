@@ -40,6 +40,16 @@ export default [
 	{ text: 'Stylesheets', slug: 'features/stylesheets', key: 'features/stylesheets' },
 
 	{ text: 'Reference', header: true, type: 'api', key: 'reference' },
-	{ text: 'Cheat Sheet', slug: 'reference/cheat-sheet', key: 'reference/cheat-sheet' },
+	{ text: 'Layouts Props', slug: 'reference/layouts-props', key: 'reference/layouts-props' },
+	{ text: 'Colors Props', slug: 'reference/colors-props', key: 'reference/colors-props' },
+	{ text: 'Gradients Props', slug: 'reference/gradients-props', key: 'reference/gradients-props' },
+	{ text: 'Shadows Props', slug: 'reference/shadows-props', key: 'reference/shadows-props' },
+	{ text: 'Aspect Ratios Props', slug: 'reference/aspect-ratios-props', key: 'reference/aspect-ratios-props' },
+	{ text: 'Typography Props', slug: 'reference/typography-props', key: 'reference/typography-props' },
+	{ text: 'Easings Props', slug: 'reference/easings-props', key: 'reference/easings-props' },
+	{ text: 'Animations Props', slug: 'reference/animations-props', key: 'reference/animations-props' },
+	{ text: 'Sizes Props', slug: 'reference/sizes-props', key: 'reference/sizes-props' },
+	{ text: 'Borders Props', slug: 'reference/borders-props', key: 'reference/borders-props' },
+	{ text: 'Layers Props', slug: 'reference/layers-props', key: 'reference/layers-props' },
 
 ] as const;

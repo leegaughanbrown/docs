@@ -3,13 +3,14 @@
 	--o-font-serif: ui-serif, serif;
 	--o-font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 	--o-font-body: var(--o-font-sans);
+
 	--o-font-size-fluid-00:clamp(.5rem,1vw,0.75rem);
 	--o-font-size-fluid-0:clamp(.75rem,2vw,1rem);
 	--o-font-size-fluid-1:clamp(1rem,3vw,1.5rem);
-	--o-font-size-fluid-2:clamp(1.5rem,4vw,2.5rem);
-	--o-font-size-fluid-3:clamp(2rem,5vw,3.5rem);
-	--o-font-size-fluid-4:clamp(2.5rem,6vw,4.5rem);
-	--o-font-size-fluid-5:clamp(3rem,8vw,5.5rem);
+	--o-font-size-fluid-2:clamp(1.25rem,4vw,2rem);
+	--o-font-size-fluid-3:clamp(1.5rem,5vw,2.5rem);
+	--o-font-size-fluid-4:clamp(1.75rem,6vw,3rem);
+	--o-font-size-fluid-5:clamp(2rem,7vw,3.5rem);
 
 	--o-font-weight-1:100;
 	--o-font-weight-2:200;
@@ -20,6 +21,7 @@
 	--o-font-weight-7:700;
 	--o-font-weight-8:800;
 	--o-font-weight-9:900;
+
 	--o-font-lineheight-00:.95;
 	--o-font-lineheight-0:1.1;
 	--o-font-lineheight-1:1.25;
@@ -31,6 +33,7 @@
 	--o-size-content-1:20ch;
 	--o-size-content-2:45ch;
 	--o-size-content-3:60ch;
+
 	--o-size-header-1:20ch;
 	--o-size-header-2:25ch;
 	--o-size-header-3:35ch;
@@ -109,15 +112,15 @@
 	--o-theme-text-light: hsla(var(--o-color-zinc-30), 1);
 	--o-theme-text-lighter: hsla(var(--o-color-zinc-40), 1);
 
-	--o-theme-bg: hsl(273, 37%, 93%);
+	--o-theme-bg: hsl(var(--o-color-base-zinc), 93%);
 	--o-theme-bg-gradient-top: var(--o-theme-bg);
-	--o-theme-bg-gradient-bottom: #fdfeff;
+	--o-theme-bg-gradient-bottom: hsl(var(--o-color-base-zinc), 97%);
 	--o-theme-bg-hover: hsla(var(--o-color-teal), 0.075);
 	--o-theme-bg-offset: hsla(var(--o-color-teal), 0.1);
 	--o-theme-bg-accent: hsla(var(--o-color-teal), var(--o-theme-accent-opacity));
 	--o-theme-code-inline-bg: hsla(var(--o-color-teal), .1);
 	--o-theme-code-inline-text: var(--o-theme-text);
-	--o-theme-code-bg: hsla(257, 31%, 22%, 1);
+	--o-theme-code-bg: hsla(var(--o-color-base-zinc), 22%, 1);
 	--o-theme-code-text: hsla(var(--o-color-zinc-95), 1);
 	--o-theme-navbar-bg: var(--o-theme-bg);
 	--o-theme-navbar-height: 6rem;
