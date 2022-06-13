@@ -4,8 +4,8 @@ export default UIDictionary({
 	'a11y.skipLink': 'Aller au contenu principal',
 	'navbar.a11yTitle': 'Navigation principale',
 	// Site settings
-	'site.title': 'Documentation Astro',
-	'site.description': 'Compilez des sites plus rapidement avec moins de JavaScript pour vos utilisateurs.',
+	'site.title': 'Documentation OxyProps',
+	'site.description': 'Utilisez la puissance des propriétés CSS personnalisées dans Oxygen Buidler.',
 	'site.og.imageSrc': '/default-og-image.png?v=1',
 	'site.og.imageAlt': "Logo d'Astro dans l'espace, avec une planète violette dans le style de saturne flottant à droite de l'image.",
 	// Left Sidebar
