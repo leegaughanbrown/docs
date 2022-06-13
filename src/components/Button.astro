@@ -18,33 +18,33 @@ const { before, after } = Astro.slots;
 
 <style>
     .pixel {
-        --link-color-stop-a: #205eff;
-        --link-color-stop-b: #c238bd;
+        --o-link-color-stop-a: var(--o-theme-accent);
+        --o-link-color-stop-b: var(--o-theme-accent-secondary);
 
-        --border-radius: 8;
-        --pixel-size: 4;
-        --background: var(--gradient-pop-1);
+        --o-border-radius: 8;
+        --o-pixel-size: 4;
+        --o-background: var(--o-gradient-pop-1);
         position: relative;
-        border-radius: calc(var(--border-radius) * 1px);
+        border-radius: calc(var(--o-border-radius) * 1px);
     }
     .pixel::before {
         content: '';
         position: absolute;
-        top: calc(var(--pixel-size) * 1px);
+        top: calc(var(--o-pixel-size) * 1px);
         right: 0;
-        bottom: calc(var(--pixel-size) * 1px);
+        bottom: calc(var(--o-pixel-size) * 1px);
         left: 0;
-        background: var(--background);
+        background: var(--o-background);
         z-index: -1;
     }
     .pixel::after {
         content: '';
         position: absolute;
         top: 0;
-        right: calc(var(--pixel-size) * 1px);
+        right: calc(var(--o-pixel-size) * 1px);
         bottom: 0;
-        left: calc(var(--pixel-size) * 1px);
-        background: var(--background);
+        left: calc(var(--o-pixel-size) * 1px);
+        background: var(--o-background);
         z-index: -1;
     }
     .pixel.variant-outline {
@@ -53,13 +53,13 @@ const { before, after } = Astro.slots;
     }
     .pixel.variant-outline::before {
         background: rgba(255, 255, 255, 0);
-        border: calc(var(--pixel-size) * 1px) solid var(--background);
+        border: calc(var(--o-pixel-size) * 1px) solid var(--o-background);
         border-top: 0;
         border-bottom: 0;
     }
     .pixel.variant-outline::after {
         background: rgba(255, 255, 255, 0);
-        border: calc(var(--pixel-size) * 1px) solid var(--background);
+        border: calc(var(--o-pixel-size) * 1px) solid var(--o-background);
         border-right: 0;
         border-left: 0;
     }
@@ -78,7 +78,7 @@ const { before, after } = Astro.slots;
             z-index: -1;
             overflow: hidden;
             border-radius: 0;
-            background: var(--background);
+            background: var(--o-background);
             -webkit-mask-image: paint(pixel);
             mask-image: paint(pixel);
         }
@@ -87,23 +87,23 @@ const { before, after } = Astro.slots;
         }
     }
     .link {
-        --border-radius: 8;
-        --duration: 200ms;
-        --delay: 30ms;
-        --background: linear-gradient(180deg, var(--link-color-stop-a), var(--link-color-stop-b));
+        --o-border-radius: 8;
+        --o-duration: 200ms;
+        --o-delay: 30ms;
+        --o-background: linear-gradient(180deg, var(--o-link-color-stop-a), var(--o-link-color-stop-b));
         display: flex;
         color: white;
-        font-family: var(--font-display);
+        font-family: var(--o-font-display);
         font-size: 1.25rem;
         width: max-content;
-        transition-property: transform, --link-color-stop-a, --link-color-stop-b;
-        transition-duration: var(--duration);
-        transition-delay: var(--delay);
+        transition-property: transform, --o-link-color-stop-a, --o-link-color-stop-b;
+        transition-duration: var(--o-duration);
+        transition-delay: var(--o-delay);
         transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     }
     .link:hover,
     .link:focus-within {
-        transform: translateY(calc(var(--pixel-size) * -0.5px));
+        transform: translateY(calc(var(--o-pixel-size) * -0.5px));
     }
     .link:active {
         transform: translateY(0);
@@ -131,34 +131,34 @@ const { before, after } = Astro.slots;
     }
 
     .variant-primary {
-        --variant: primary;
-        --background: linear-gradient(180deg, var(--link-color-stop-a), var(--link-color-stop-b));
+        --o-variant: primary;
+        --o-background: linear-gradient(180deg, var(--o-link-color-stop-a), var(--o-link-color-stop-b));
     }
     .variant-primary:hover,
     .variant-primary:focus-within {
-        --link-color-stop-a: #6D39FF;
-        --link-color-stop-b: #AF43FF;
+        --o-link-color-stop-a: var(--o-theme-accent);
+        --o-link-color-stop-b: var(--o-theme-accent-secondary);
     }
     .variant-primary:active {
-        --link-color-stop-a: #5F31E1;
-        --link-color-stop-b: #A740F3;
+        --o-link-color-stop-a: var(--o-theme-accent);
+        --o-link-color-stop-b: var(--o-theme-accent-secondary);
     }
 
     .variant-outline {
-        --variant: outline;
-        --background: none;
-        color: var(--background);
+        --o-variant: outline;
+        --o-background: none;
+        color: var(--o-background);
     }
     .variant-outline > a::before {
         position: absolute;
         top: 0;
-        right: calc(var(--pixel-size) * 1px);
-        bottom: calc(var(--pixel-size) * 1px);
-        left: calc(var(--pixel-size) * 1px);
+        right: calc(var(--o-pixel-size) * 1px);
+        bottom: calc(var(--o-pixel-size) * 1px);
+        left: calc(var(--o-pixel-size) * 1px);
         content: "";
         display: block;
         transform-origin: bottom center;
-        background: linear-gradient(to top, var(--background), rgba(255, 255, 255, 0));
+        background: linear-gradient(to top, var(--o-background), rgba(255, 255, 255, 0));
         opacity: 0.3;
         transform: scaleY(0);
         transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
