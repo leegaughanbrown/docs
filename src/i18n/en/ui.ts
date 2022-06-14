@@ -5,7 +5,7 @@ export default {
 	'site.title': 'OxyProps Documentation',
 	'site.description': 'Bring the power of CSS Custom Properties to Oxygen Buidler.',
 	'site.og.imageSrc': '/default-og-image.jpg?v=1',
-	'site.og.imageAlt': 'astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground',
+	'site.og.imageAlt': 'OxyProps logo over a computer screen, oxygen builder is open with oxyprops color context menu active',
 	// Left Sidebar
 	'leftSidebar.a11yTitle': 'Site Navigation',
 	'leftSidebar.learnTab': 'Learn',
