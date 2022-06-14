@@ -7,103 +7,59 @@ title: Getting Started
 description: A basic intro to OxyProps.
 i18nReady: true
 ---
-Static Site Generator  🚀  Bring your own Framework  🚀  Ship Less JavaScript
+A WordPress CSS Framework  🔸  Developped for Oxygen Buidler  🔸  Saves your precious time
+
+## What is OxyProps?
+
+**OxyProps** is a modern CSS custom properties first CSS Framework for Oxygen Builder. It helps **freelancers** and **agencies** work faster and build consistent UI through smart and instant access to the framework right in the buidler.
+
+It is inspired, and built on top of [Open Props](https://open-props.style), an open source collection of expertly crafted web design token, aimed at creating consistent components.
+
+Our mission is to make a user-friendly, powerful environment for Oxygen Builder and bring innovation to Visual IDE industry.
 
 
-> Have an older project? Follow the [migration guide](/en/migrate/) to upgrade to v1.0 beta!
+## Start building with OxyProps
 
+Jump right in and add some props, classe and elements to your site!
 
-## Try OxyProps
+🏗️ Add a [ligh & dark](/en/features/custom-elements/) modes toggle to your site.
 
-We've made it as easy as possible to get started with Astro either in your browser, or on your machine!
+🏗️ Create your first [Layout](/en/framework/layouts/).
 
-### Online Playgrounds
+🏗️ Add additional [custom colors](/en/dashboard-setup/) to your site.
 
-Visit [astro.new](https://astro.new/) for the easiest way to "try before you buy." Choose from a variety of starter templates and start building a full, working version of Astro right in your browser!
-
-Or, **instantly launch our basic starter project** with just one click of a button:
-
-<div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-    <Button href="https://astro.new/basics?on=codesandbox">Open in CodeSandbox</Button>
-    <Button href="https://astro.new/basics?on=stackblitz">Open in StackBlitz</Button>
-</div>
-
-### Install Astro Locally
-
-Ready to install?
-
-Get a new project up and running locally in no time with our easy `create-astro` CLI wizard!
-
-```bash
-# create a new project with npm
-npm create astro@latest
-
-# or yarn
-yarn create astro
-
-# or pnpm
-pnpm create astro@latest
-```
-
-⚙️ Our [Installation Guide](/en/install/auto/) has full, step-by-step instructions for installing Astro with your favourite package manager.
-
-⚙️ See instructions for [manual setup](/en/install/manual/) instead.
-
-
-## Start building with Astro
-
-Jump right in and add some content and features to your site!
-
-🏗️ Add new [Astro (.astro) pages](/en/core-concepts/astro-pages/) and/or [Markdown (.md) pages](/en/guides/markdown-content/) to your site.
-
-🏗️ Create your first [Layout](/en/core-concepts/layouts/).
-
-🏗️ Add additional [CSS and styling](/en/guides/styling/) to your site.
-
-*... check out even more under **Features***
+*... check out even more under **Builder Features***
 
 
 
-## Learn Astro
+## Learn OxyProps
 
 See examples of some of the key concepts and patterns of an Astro site!
 
-📚 Read more about Astro’s [project structure](/en/core-concepts/project-structure/).
+📽 Watch this video to [Install and setup OxyProps](https://youtu.be/WffqhZojpYY).
 
-📚 Learn about Astro's [template directives](/en/reference/directives-reference/).
+📽 Learn about OxyProps [color schemes](https://youtu.be/35HkgbYpNKg).
 
-📚 Explore Astro’s [runtime API](/en/reference/api-reference/).
+📽 Explore OxyProps’s [RAM layout system](https://youtu.be/YIQYtykjsLg).
 
 *... find more material under **Reference***
 
 
-## Extend Astro
-
-🧰 Start your next project with a [prebuilt theme](https://astro.build/themes/)
-
-🧰 Customize your site with official and community [plugins and components](https://astro.build/integrations/).
-
-🧰 Get inspired by visiting our [site showcase](https://astro.build/showcase/).
-
-*... see our [guide to using integrations](/en/guides/integrations-guide/)*
-
-
-
 ## Join our Community
 
-Join us in the [Astro Discord](https://astro.build/chat/) to share with and get help from an active, friendly community!
+Join us in the [OxyProps Discord](https://discord.gg/ZaxJsx43Xs) to share with and get help from an active, friendly community!
 
-💬 Say hi in our `#introduce-yourself` channel!
+💬 Say hi in our `#general` channel!
 
-💬 Ask our Support Squad a question in our `#support-threads` channel!
+💬 Ask a question in our `#help` channel!
 
 💬 Share what you've been working on in our `#showcase` channel!
 
 
 ## Learn More
 
-[Astro Blog](https://astro.build/blog/)
+[OxyProps Blog](https://oxyprops.com/blog/)
 
-[Astro changelog](https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md)
+[OxyProps Youtube channel](https://www.youtube.com/channel/UCKxy30xZGZlCEF23R7Y5hYA/)
 
-[Astro Migration guide](/en/migrate/)
+[OxyProps changelog](https://feedback.oxyprops.com/changelog)

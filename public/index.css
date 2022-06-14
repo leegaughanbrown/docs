@@ -375,9 +375,9 @@ pre:focus {
 }
 
 blockquote {
-	margin: 2rem 0 2rem 0;
+	margin-block: 2rem;
 	padding: 1.25em 1.5rem;
-	border-left: 8px solid var(--o-theme-divider);
+	border-left: 8px solid var(--o-theme-accent);
 	background-color: var(--o-theme-bg-offset);
 	border-radius: 0 0.25rem 0.25rem 0;
 	line-height: 1.7;

@@ -11,13 +11,15 @@ export default [
 	{ text: 'Start Here', header: true, type: 'learn', key: 'startHere' },
 	{ text: 'Getting Started', slug: 'getting-started-with-oxyprops', key: 'getting-started' },
 	{ text: 'Installation', slug: 'install', key: 'install' },
-	{ text: 'Dashboard Setup', slug: 'dashboard-setup', key: 'dashboard-setup' },
-	{ text: 'OxyProps vs. X', slug: 'comparing-oxyprops-vs-other-plugins', key: 'comparing-oxyprops-vs-other-plugins' },
+	{ text: 'Plugin Settings', slug: 'plugin-settings', key: 'plugin-settings' },
+	// { text: 'OxyProps vs. X', slug: 'comparing-oxyprops-vs-other-plugins', key: 'comparing-oxyprops-vs-other-plugins' },
 
 	{ text: 'Core Concepts', header: true, type: 'learn', key: 'coreConcepts' },
+	{ text: 'Design Tokens', slug: 'core-concepts/design-tokens', key: 'core-concepts/design-tokens' },
 	{ text: 'CSS Custom Properties', slug: 'core-concepts/css-custom-properties', key: 'core-concepts/css-custom-properties' },
 
 	{ text: 'CSS Framework', header: true, type: 'learn', key: 'framework' },
+	{ text: 'Normalize', slug: 'framework/normalize', key: 'framework/normalize' },
 	{ text: 'Colors', slug: 'framework/colors', key: 'framework/colors' },
 	{ text: 'Layouts', slug: 'framework/layouts', key: 'framework/layouts' },
 	{ text: 'Gradients', slug: 'framework/gradients', key: 'framework/gradients' },

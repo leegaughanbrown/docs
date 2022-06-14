@@ -1,8 +1,8 @@
 ---
 layout: ~/layouts/MainLayout.astro
-title: Colors
-description: An intro to the OxyProps Colors properties and classes syntax.
+title: Media Queries
+description: An intro to the OxyProps Media Queries properties and classes syntax.
 i18nReady: true
 ---
 
-**OxyProps Colors** are the basic building blocks of any OxyProps project.
+**OxyProps Media Queries** docs will be here soon.

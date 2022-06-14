@@ -1,408 +1,299 @@
 ---
 layout: ~/layouts/MainLayout.astro
-title: Components
-description: An intro to the .astro component syntax.
+title: Custom properties
+description: An intro to the CSS custom properties.
 i18nReady: true
 ---
 
-**Astro components** are the basic building blocks of any Astro project. They are HTML-only templating components with no client-side runtime.
+Custom properties (also referred to as CSS variables) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using the custom property notation (e.g., `--main-color: black;`) and are accessed using the `var()` function (e.g., `color: var(--main-color);`).
 
-Astro component syntax is a superset of HTML. The syntax was [designed to feel familiar to anyone with experience writing HTML or JSX](/en/comparing-astro-vs-other-tools/#astro-vs-jsx), and adds support for including components and JavaScript expressions. You can spot an Astro component by its file extension: `.astro`.
+Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.
 
-Astro components are extremely flexible. Often, an Astro component will contain some **reusable UI on the page**, like a header or a profile card. At other times, an Astro component may contain a smaller snippet of HTML, like a collection of common `<meta>` tags that make SEO easy to work with. Astro components can even contain an entire page layout.
+Custom properties are subject to the cascade and inherit their value from their parent.
 
-The most important thing to know about Astro components is that they **render to HTML during your build.** Even if you run JavaScript code inside of your components, it will all run ahead-of-time, stripped from the final page that you send to your users. The result is a faster site, with zero JavaScript footprint added by default.
+Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
 
+## Basic usage
 
-## Component Overview
+Declaring a custom property is done using a custom property name that begins with a double hyphen (`--`), and a property value that can be any valid CSS value. Like any other property, this is written inside a ruleset, like so:
 
-An Astro component is made up of two main parts: the **Component Script** and the **Component Template**. Each part performs a different job, but together they aim to provide a framework that is both easy to use and expressive enough to handle whatever you might want to build.
-
-```astro
----
-// Component Script (JavaScript)
----
-<!-- Component Template (HTML + JS Expressions) -->
+```css
+element {
+  --main-bg-color: brown;
+}
 ```
 
-You can use components inside of other components, to build more and more advanced UI. For example, a `Button` component could be used to create a `ButtonGroup` component like so:
+Note that the selector given to the ruleset defines the scope that the custom property can be used in. A common best practice is to define custom properties on the `:root` pseudo-class, so that it can be applied globally across your HTML document:
 
-```astro
----
-// Example: ButtonGroup.astro
-import Button from './Button.astro';
----
-<div>
-  <Button title="Button 1" />
-  <Button title="Button 2" />
-  <Button title="Button 3" />
-</div>
+```css
+:root {
+  --main-bg-color: brown;
+}
 ```
 
+However, this doesn't always have to be the case: you maybe have a good reason for limiting the scope of your custom properties.
 
-### The Component Script
+> 💡 *Custom property names are case sensitive `--my-awesome-color` will be treated as a separate custom property to `--My-awesome-color`.*
 
-Astro uses a code fence (`---`) to identify the component script in your Astro component. If you've ever written Markdown before, you may already be familiar with a similar concept called *frontmatter.* Astro's idea of a component script was directly inspired by this concept.
+As mentioned earlier, you use the custom property value by specifying your custom property name inside the `var()` function, in place of a regular property value:
 
-You can use the component script to write any JavaScript code that you need to render your template. This can include:
-
-- Importing other Astro components
-- Importing other framework components, like React
-- Importing data, like a JSON file
-- fetching content from an API or database
-- creating variables that you will reference in your template
-
-
-```astro
----
-// Note: Imports must live at the top of your file.
-import SomeAstroComponent from '../components/SomeAstroComponent.astro';
-import SomeReactComponent from '../components/SomeReactComponent.jsx';
-import someData from '../data/pokemon.json';
-
-// Access passed-in component props, like `<X title="Hello, World" />`
-const {title} = Astro.props;
-// Fetch external data, even from a private API or database
-const data = await fetch('SOME_SECRET_API_URL/users').then(r => r.json());
----
-<!-- Your template here! -->
+```css
+element {
+  background-color: var(--main-bg-color);
+}
 ```
 
-The code fence is designed to guarantee that the JavaScript that you write in it is "fenced in." It won't escape into your frontend application, or fall into your users hands. You can safely write code here that is expensive or sensitive (like a call to your private database) without worrying about it ever ending up in your user's browser.
+## First steps with custom properties
 
->💡 *You can even write TypeScript in your component script!*
+Let's start with this CSS that applies the same color to elements of different classes:
 
-### The Component Template
-
-Below the component script, sits the component template. The component template decides the HTML output of your component.
-
-If you write plain HTML here, your component will render that HTML in any Astro page it is imported and used.
-
-However, Astro's component template syntax also supports **JavaScript expressions**, **imported components** and [**special Astro directives**](/en/reference/directives-reference/). Data and values defined (at page build time) in the component script can be used in the component template to produce dynamically-created HTML.
-
-```astro
----
-// Your component script here!
-import ReactPokemonComponent from '../components/ReactPokemonComponent.jsx';
-const myFavoritePokemon = [/* ... */];
----
-<!-- HTML comments supported! -->
-
-<h1>Hello, world!</h1>
-
-<!-- Use props and other variables from the component script: -->
-<p>My favorite pokemon is: {Astro.props.title}</p>
-
-<!-- Include other components with a `client:` directive to hydrate: -->
-<ReactPokemonComponent client:visible />
-
-<!-- Mix HTML with JavaScript expressions, similar to JSX: -->
-<ul>
-  {myFavoritePokemon.map((data) => <li>{data.name}</li>)}
-<ul>
-
-<!-- Use a template directive to inject an unescaped HTML string into an element: -->
-<p set:html={rawHTMLString} />
-```
-
-### Dynamic JSX Expressions
-
-Astro components can define local variables inside of the frontmatter component script. Any script variables are then automatically available in the component's HTML template below.
-
-#### Dynamic Values
-
-These local variables can be used in curly braces to pass values to be used as HTML output:
-
-```astro
----
-const name = "Astro";
----
-<div>
-  <h1>Hello {name}!</h1>
-</div>
-```
-
-#### Dynamic Attributes
-
-These local variables can be used in curly braces to pass attribute values to HTML elements and components:
-
-```astro
----
-const name = "Astro";
----
-<h1 class={name}>Attribute expressions are supported</h1>
-
-<MyComponent templateLiteralNameAttribute={`MyNameIs${name}`} />
-```
-
-#### Dynamic HTML
-
-These local variables can be used in JSX-like functions to produce dynamically-generated HTML elements:
-
-```astro
----
-const items = ["Dog", "Cat", "Platypus"];
----
-<ul>
-  {items.map((item) => (
-    <li>{item}</li>
-  ))}
-</ul>
-```
-
-#### Fragments & Multiple Elements
-
-Remember: an Astro component template can render multiple elements with no need to wrap everything in a single `<div>` or `<>`.
-
-However, when using an Astro JSX-like expression to dynamically create elements, you must wrap these multiple elements inside of a **Fragment** just like you would in JavaScript or JSX. Astro supports using either `<Fragment> </Fragment>` or `<> </>`.
-
-```astro
----
-const items = ["Dog", "Cat", "Platypus"];
----
-<ul>
-  {items.map((item) => (
-    <>
-      <li>Red {item}</li>
-      <li>Blue {item}</li>
-      <li>Green {item}</li>
-    </>
-  ))}
-</ul>
-```
-
-
-### Component Props
-
-An Astro component can define and accept props. These props then become available to the component template for rendering HTML. Props are available on the `Astro.props` global in your frontmatter script.
-
-Here is an example of a component that receives a `greeting` prop and a `name` prop. Notice that the props to be received are destructured from the global `Astro.props` object.
-
-```astro
----
-// Example: GreetingHeadline.astro
-// Usage: <GreetingHeadline greeting="Howdy" name="Partner" />
-const { greeting, name } = Astro.props
----
-<h2>{greeting}, {name}!</h2>
-```
-
-You can also define your props with TypeScript by exporting a `Props` type interface. Astro will automatically pick up any exported `Props` interface and give type warnings/errors for your project. These props can also be given default values when destructured from `Astro.props`
-
-```astro
----
-// src/components/GreetingHeadline.astro
-export interface Props {
-  name: string;
-  greeting?: string;
+```css
+.one {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
 }
 
-const { greeting = "Hello", name } = Astro.props as Props;
----
-<h2>{greeting}, {name}!</h2>
+.two {
+  color: white;
+  background-color: black;
+  margin: 10px;
+  width: 150px;
+  height: 70px;
+  display: inline-block;
+}
+.three {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 75px;
+}
+.four {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 100px;
+}
+
+.five {
+  background-color: brown;
+}
 ```
 
-This component, when imported and rendered in other Astro components, layouts or pages, can be passed these props as attributes:
+We'll apply it to this HTML:
 
-```astro
----
-// src/components/GreetingCard.astro
-import GreetingHeadline from './GreetingHeadline.astro';
-const name = "Astro"
----
-<h1>Greeting Card</h1>
-<GreetingHeadline greeting="Hi" name={name} />
-<p>I hope you have a wonderful day!</p>
-```
-
-### Slots
-
-The `<slot />` element is a placeholder for external HTML content, allowing you to inject (or "slot") child elements from other files into your component template.
-
-By default, all child elements passed to a component will be rendered in its `<slot />`
-
-> 💡Unlike _props_, which are attributes passed to an Astro component available for use throughout your component with `Astro.props()`, _slots_ render child HTML elements where they are written.
-
-```astro
----
-// src/components/Wrapper.astro
-import Header from './Header.astro';
-import Logo from './Logo.astro';
-import Footer from './Footer.astro';
-
-const { title } = Astro.props
----
-<div id="content-wrapper">
-  <Header />
-  <Logo />
-  <h1>{title}</h1>
-  <slot />  <!-- children will go here -->
-  <Footer />
+```html
+<div>
+  <div class="one">1:</div>
+  <div class="two">2: Text <span class="five">5 - more text</span></div>
+  <input class="three">
+  <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
+... which leads us to this:
 
-```astro
----
-// src/pages/fred.astro
-import Wrapper from '../components/Wrapper.astro';
----
-<Wrapper title="Fred's Page">
-  <h2>All about Fred</h2>
-  <p>Here is some stuff about Fred.</p>
-</Wrapper>
+<div style="width:100%; background-color: white; padding: 4rem;">
+  <div class="one" style="color: white;background-color: brown;margin: 10px;width: 50px;height: 50px;display: inline-block;">1:</div>
+  <div class="two" style="color: white;background-color: black;margin: 10px;width: 150px;height: 70px;display: inline-block;">2: Text <span class="five" style="background-color: brown;">5 - more text</span></div>
+  <input class="three" style="color: white;background-color: brown;margin: 10px;width: 75px;">
+  <textarea class="four" style="color: white;background-color: brown;margin: 10px;width: 100px;">4: Lorem Ipsum</textarea>
+</div>
+
+## Using the `:root` pseudo-class
+
+Notice the repetitive CSS in the example above. The background color is set to brown in several places. For some CSS declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this problem naturally. For non-trivial projects, this is not always possible. By declaring a custom property on the `:root` pseudo-class and using it where needed throughout the document, a CSS author can reduce the need for repetition:
+
+```css
+:root {
+  --main-bg-color: brown;
+}
+
+.one {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.two {
+  color: white;
+  background-color: black;
+  margin: 10px;
+  width: 150px;
+  height: 70px;
+  display: inline-block;
+}
+.three {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 75px;
+}
+.four {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 100px;
+}
+
+.five {
+  background-color: var(--main-bg-color);
+}
 ```
+This leads to the same result as the previous example, yet allows for one canonical declaration of the desired property value; very useful if you want to change the value across the entire page later.
 
-This pattern is the basis of an Astro layout component: an entire page of HTML content can be “wrapped” with `<Layout></Layout>` tags and sent to the Layout component to render inside of common page elements.
+> 💡 The `var()` CSS function can be used to insert the value of a custom property instead of **any part** of a value of another property.
 
+## Inheritance of custom properties
 
+Custom properties do inherit. This means that if no value is set for a custom property on a given element, the value of its parent is used. Take this HTML:
 
-#### Named Slots
-
-An Astro component can also have named slots. This allows you to pass only HTML elements with the corresponding slot name into a slot's location.
-
-```astro
----
-// src/components/Wrapper.astro
-import Header from './Header.astro';
-import Logo from './Logo.astro';
-import Footer from './Footer.astro';
-
-const { title } = Astro.props
----
-<div id="content-wrapper">
-  <Header />
-  <slot name="after-header"/>  <!--  children with the `slot="after-header"` attribute will go here -->
-  <Logo />
-  <h1>{title}</h1>
-  <slot />  <!--  children without a `slot`, or with `slot="default"` attribute will go here -->
-  <Footer />
-  <slot name="after-footer"/>  <!--  children with the `slot="after-footer"` attribute will go here -->
+```html
+<div class="one">
+  <div class="two">
+    <div class="three"></div>
+    <div class="four"></div>
+  </div>
 </div>
 ```
+... with the following CSS:
 
-```astro
----
-// src/pages/fred.astro
-import Wrapper from '../components/Wrapper.astro';
----
-<Wrapper title="Fred's Page">
-  <img src="https://my.photo/fred.jpg" slot="after-header">
-  <h2>All about Fred</h2>
-  <p>Here is some stuff about Fred.</p>
-  <p slot="after-footer">Copyright 2022</p>
-</Wrapper>
+```css
+.two {
+  --test: 10px;
+}
+
+.three {
+  --test: 2em;
+}
 ```
 
+In this case, the results of `var(--test)` are:
 
-Use a `slot="my-slot"` attribute on the child element that you want to pass through to a matching `<slot name="my-slot" />` placeholder in your component.
+- For the `class="two"` element: 10px
+- For the `class="three"` element: 2em
+- For the `class="four"` element: 10px (inherited from its parent)
+- For the `class="one"` element: invalid value, which is the default value of any custom property
 
-> ⚠️ This only works when you’re passing slots to other Astro components. Learn more about including other [UI framework components](/en/core-concepts/framework-components/) in Astro files.
+Keep in mind that these are custom properties, not actual variables like you might find in other programming languages. The value is computed where it is needed, not stored for use in other rules. For instance, you cannot set a property for an element and expect to retrieve it in a sibling's descendant's rule. The property is only set for the matching selector and its descendants, like any normal CSS.
 
+## Custom property fallback values
 
-#### Fallback Content for Slots
-Slots can also render **fallback content**. When there are no matching children passed to a slot, a `<slot />` element will render its own placeholder children.
+Using the `var()` function, you can define multiple fallback values when the given variable is not yet defined; this can be useful when working with Custom Elements and Shadow DOM.
 
-```astro
----
-// src/components/Wrapper.astro
-import Header from './Header.astro';
-import Logo from './Logo.astro';
-import Footer from './Footer.astro';
+> ⚠️ Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
-const { title } = Astro.props
----
-<div id="content-wrapper">
-  <Header />
-  <Logo />
-  <h1>{title}</h1>
-  <slot>
-    <p>This is my fallback content, if there is no child passed into slot</p>
-  </slot>
-  <Footer />
+The first argument to the function is the name of the custom property to be substituted. The second argument to the function, if provided, is a fallback value, which is used as the substitution value when the referenced custom property is invalid. The function only accepts two parameters, assigning everything following the first comma as the second parameter. If that second parameter is invalid, such as if a comma-separated list is provided, the fallback will fail. For example:
+
+```css
+.two {
+  /* Red if --my-var is not defined */
+  color: var(--my-var, red);
+}
+
+.three {
+  /* pink if --my-var and --my-background are not defined */
+  background-color: var(--my-var, var(--my-background, pink));
+}
+
+.three {
+   /* Invalid: "--my-background, pink" */
+  background-color: var(--my-var, --my-background, pink);
+}
+```
+
+Including a custom property as a fallback, as seen in the second example above, is the correct way to provide more than one fallback. The technique has been seen to cause performance issues as it takes more time to parse through the variables.
+
+> 💡 The syntax of the fallback, like that of custom properties, allows commas. For example, var(--foo, red, blue) defines a fallback of red, blue — anything between the first comma and the end of the function is considered a fallback value.
+
+## Handling invalid custom properties
+
+Each CSS property can be assigned a defined set of values. If you try to assign a value to a property that is outside its set of valid values, it's considered invalid.
+
+When the browser encounters an invalid value for a normal property, it discards the value, and elements are assigned the values that they would have had if the declaration simply did not exist.
+
+However, when the values of custom properties are parsed, the browser doesn't yet know where they will be used, so it must consider nearly all values as valid.
+
+Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense. Properties and custom variables can lead to invalid CSS statements, leading to the new concept of valid at computed time.
+
+When the browser encounters an invalid `var()` substitution, then the `initial` or `inherited` value of the property is used.
+
+The next two examples illustrate this.
+
+### Invalid normal properties
+
+In this example we attempt to apply a value of `16px` to the color property. Because this is invalid, the CSS is discarded and the result is as if the rule did not exist, so the previous `color: blue` rule is applied instead, and the paragraph is blue.
+
+#### HTML
+```html
+<p>This paragraph is initially black.</p>
+```
+
+#### CSS
+```css
+p {
+  color: blue;
+}
+
+p {
+  color: 16px;
+}
+```
+#### Result
+<div style="width:100%; background-color: white; padding: 4rem;">
+  <p style="color: blue;color: 16px;">This paragraph is initially black.</p>
 </div>
+
+### Invalid custom properties
+
+This example is just like the last one, except we use a custom property.
+
+As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for `color`. After substitution, the property doesn't make sense. The browser handles this situation in two steps:
+
+- Check if the property `color` is inheritable. It is, but this `<p>` doesn't have any parent with the color property set. So we move on to the next step.
+- Set the value to its default initial value, which is `black`.
+
+#### HTML
+```html
+<p>This paragraph is initially black.</p>
 ```
 
-### CSS Styles
+#### CSS
+```css
+:root {
+  --text-color: 16px;
+}
 
-CSS `<style>` tags are also supported inside of the component template.
+p {
+  color: blue;
+}
 
-They can be used to style your components, and all style rules are automatically scoped to the component itself to prevent CSS conflicts in large apps.
+p {
+  color: var(--text-color);
+}
 
-```astro
----
-// Your component script here!
----
-<style>
-  /* scoped to the component, other H1s on the page remain the same */
-  h1 { color: red }
-</style>
-
-<h1>Hello, world!</h1>
 ```
+#### Result
+<div style="width:100%; background-color: white; padding: 4rem;color: black;">
+  <p style="--text-color: 16px;color: blue;color: var(--text-color);">This paragraph is initially black.</p>
+</div>
 
-> ⚠️ The styles defined here apply only to content written directly in the component's own component template. Children, and any imported components will **not** be styled by default.
+## Custom properties values in JavaScript
 
-📚 See our [Styling Guide](/en/guides/styling/) for more information on applying styles.
+To use the values of custom properties in JavaScript, it is just like standard properties.
 
-### Client-Side Scripts
+```js
+// get variable from inline style
+element.style.getPropertyValue("--my-var");
 
-To send JavaScript to the browser without [using a framework component](/en/core-concepts/framework-components/) (React, Svelte, Vue, Preact, SolidJS, AlpineJS, Lit) or an [Astro integration](https://astro.build/integrations/) (e.g. astro-XElement), you can use a `<script>` tag in your Astro component template and send JavaScript to the browser that executes in the global scope.
+// get variable from wherever
+getComputedStyle(element).getPropertyValue("--my-var");
 
-By default, `<script>` tags are processed by Astro.
-
-- Any imports will be bundled, allowing you to import local files or Node modules.
-- The processed script will be injected into your page’s `<head>` with [`type="module"`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
-- If your component is used several times on a page, the script tag will only be included once.
-
-> ⚠️ You can’t currently write TypeScript in client-side scripts, but you _can_ import a Typescript file if you prefer writing with that syntax.
-
-```astro
-<script>
-  // Processed! Bundled! ESM imports work, even to npm packages.
-</script>
+// set variable on inline style
+element.style.setProperty("--my-var", jsVar + 4);
 ```
-
-To avoid bundling the script, you can use the `is:inline` attribute.
-
-```astro
-<script is:inline>
-  // Will be rendered into the HTML exactly as written!
-  // ESM imports will not be resolved relative to the file.
-</script>
-```
-
-Multiple `<script>` tags can be used in the same `.astro` file using any combination of the methods above.
-
-> **Note:** Adding `type="module"` or any other attribute to a `<script>` tag will disable Astro's default bundling behavior, treating the tag as if it had an `is:inline` directive.
-
-📚 See our [directives reference](/en/reference/directives-reference/#script--style-directives) page for more information about the directives available on `<script>` tags.
-
-#### Loading External Scripts
-
-**When to use this:** If your JavaScript file lives inside of `public/`.
-
-Note that this approach skips the JavaScript processing, bundling and optimizations that are provided by Astro when you use the `import` method described below.
-
-```astro
-// absolute URL path
-<script is:inline src="/some-external-script.js"></script>
-```
-#### Using Hoisted Scripts
-
-**When to use this:** If your external script lives inside of `src/` _and_ it supports the ESM module type.
-
-Astro detects these JavaScript client-side imports and then builds, optimizes, and adds the JS to the page automatically.
-
-```astro
-// ESM import
-<script>
-  import './some-external-script.js';
-</script>
-```
-
-
-## Next Steps
-
-📚 Read about [Astro's built-in components](/en/reference/api-reference/#built-in-components).
-
-📚 Learn about using [JavaScript framework components](/en/core-concepts/framework-components/) in your Astro project.

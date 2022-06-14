@@ -1,8 +1,8 @@
 ---
 layout: ~/layouts/MainLayout.astro
-title: Colors
-description: An intro to the OxyProps Colors properties and classes syntax.
+title: Animations
+description: An intro to the OxyProps Animations properties and classes syntax.
 i18nReady: true
 ---
 
-**OxyProps Colors** are the basic building blocks of any OxyProps project.
+**OxyProps Animations** docs will be here soon.
