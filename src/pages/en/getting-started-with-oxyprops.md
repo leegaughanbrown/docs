@@ -1,7 +1,4 @@
 ---
-setup: |
-    import Button from '../../components/Button.astro'
-    import ContributorList from '../../components/ContributorList.astro'
 layout: ~/layouts/MainLayout.astro
 title: Getting Started
 description: A basic intro to OxyProps.
@@ -15,14 +12,14 @@ A WordPress CSS Framework  🔸  Developped for Oxygen Buidler  🔸  Saves your
 
 It is inspired, and built on top of [Open Props](https://open-props.style), an open source collection of expertly crafted web design token, aimed at creating consistent components.
 
-Our mission is to make a user-friendly, powerful environment for Oxygen Builder and bring innovation to Visual IDE industry.
+Oxyprops aims to make the use of the framework as simple and intuitive as possible for the user while providing the latest CSS features.
 
 
 ## Start building with OxyProps
 
 Jump right in and add some props, classe and elements to your site!
 
-🏗️ Add a [ligh & dark](/en/features/custom-elements/) modes toggle to your site.
+🏗️ Add a [light & dark](/en/features/custom-elements/) modes toggle to your site.
 
 🏗️ Create your first [Layout](/en/framework/layouts/).
 
@@ -34,9 +31,9 @@ Jump right in and add some props, classe and elements to your site!
 
 ## Learn OxyProps
 
-See examples of some of the key concepts and patterns of an Astro site!
+See examples of some of the key concepts of building your site with OxyProps!
 
-📽 Watch this video to [Install and setup OxyProps](https://youtu.be/WffqhZojpYY).
+📽 Watch this video to [install and setup OxyProps](https://youtu.be/WffqhZojpYY).
 
 📽 Learn about OxyProps [color schemes](https://youtu.be/35HkgbYpNKg).
 
