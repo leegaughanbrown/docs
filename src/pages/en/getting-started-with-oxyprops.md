@@ -44,7 +44,7 @@ See examples of some of the key concepts of building your site with OxyProps!
 
 ## Join our Community
 
-Join us in the [OxyProps Discord](https://discord.gg/ZaxJsx43Xs) to share with and get help from an active, friendly community!
+Join us in the [OxyProps Discord](https://discord.gg/Np88J479Hr) to share with and get help from an active, friendly community!
 
 💬 Say hi in our `#general` channel!
 
