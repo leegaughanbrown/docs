@@ -44,7 +44,7 @@ Regardez des exemples des concepts clés du dévelopement d'un site avec OxyProp
 
 ## Rejoignez notre communauté
 
-Retrouvez-nous dans le [Discord OxyProps](https://discord.gg/ZaxJsx43Xs) pour partager et obetinr de l'aide d'une communauté active et sympa !
+Retrouvez-nous dans le [Discord OxyProps](https://discord.gg/Np88J479Hr) pour partager et obetinr de l'aide d'une communauté active et sympa !
 
 💬 Faites coucou dans le salon `#general` !
 

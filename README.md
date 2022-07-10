@@ -22,7 +22,7 @@ You being a part of our community is welcome.
 ## Chat with Us
 
 You can learn more about OxyProps, get support, and meet other users in
-- [our Discord community](https://discord.gg/AJyey5aP).
+- [our Discord community](https://discord.gg/Np88J479Hr).
 - [our Facebook community](https://www.facebook.com/groups/oxyprops).
 
 ## Raise an Issue
@@ -97,4 +97,4 @@ That’s it.
 As you [open a pull request](https://github.com/withastro/astro/compare), please include a clear title. The description will be pre-filled with questions that you can answer by editing right in the text field.
 
 Thank you for helping make the docs awesome.
-And please, come chat with us on [Discord](https://astro.build/chat) or [Facebook](https://www.facebook.com/groups/oxyprops) if you have any questions.
+And please, come chat with us on [Discord](https://discord.gg/Np88J479Hr) or [Facebook](https://www.facebook.com/groups/oxyprops) if you have any questions.

@@ -16,7 +16,7 @@ Two key features make Astro different from most alternatives:
 
 For more details, you can see our in-depth comparisons on this page.
 
-If you don't see your favorite site builder listed here, [ask us in Discord](https://astro.build/chat/).
+If you don't see your favorite site builder listed here, [ask us in Discord](https://discord.gg/Np88J479Hr).
 
 ## Docusaurus vs. Astro
 
