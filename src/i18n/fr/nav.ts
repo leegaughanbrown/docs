@@ -15,6 +15,7 @@ export default NavDictionary({
 
 	// Basics
 	framework: 'Le Framework CSS',
+	'framework/grids': 'Grids',
 	'framework/normalize': 'Normalize',
 	'framework/colors': 'Couleurs',
 	'framework/layouts': 'Mise en page',

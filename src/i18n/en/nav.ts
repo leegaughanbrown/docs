@@ -19,6 +19,7 @@ export default [
 	{ text: 'CSS Custom Properties', slug: 'core-concepts/css-custom-properties', key: 'core-concepts/css-custom-properties' },
 
 	{ text: 'CSS Framework', header: true, type: 'learn', key: 'framework' },
+	{ text: 'Grids', slug: 'framework/grids', key: 'framework/grids' },
 	{ text: 'Normalize', slug: 'framework/normalize', key: 'framework/normalize' },
 	{ text: 'Colors', slug: 'framework/colors', key: 'framework/colors' },
 	{ text: 'Layouts', slug: 'framework/layouts', key: 'framework/layouts' },
