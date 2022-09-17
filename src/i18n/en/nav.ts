@@ -20,6 +20,7 @@ export default [
 
 	{ text: 'CSS Framework', header: true, type: 'learn', key: 'framework' },
 	{ text: 'Grids', slug: 'framework/grids', key: 'framework/grids' },
+	{ text: '12 Cols Grid', slug: 'framework/grids12', key: 'framework/grids12' },
 	{ text: 'Normalize', slug: 'framework/normalize', key: 'framework/normalize' },
 	{ text: 'Colors', slug: 'framework/colors', key: 'framework/colors' },
 	{ text: 'Layouts', slug: 'framework/layouts', key: 'framework/layouts' },
