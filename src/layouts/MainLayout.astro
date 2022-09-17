@@ -17,7 +17,7 @@ const githubEditUrl = `https://github.com/oxyprops/docs/blob/main/${currentFile}
 const t = useTranslations(Astro);
 const formatTitle = (content) => (content.title ? `${content.title} | ${t('site.title')}` : t('site.title'));
 const lang = getLanguageFromURL(url.pathname);
-const canonicalURL = new URL(Astro.canonicalURL);
+const canonicalURL = new URL(Astro.url);
 if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/`, '/en/');
 ---
 
