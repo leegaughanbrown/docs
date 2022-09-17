@@ -8,7 +8,7 @@ import RightSidebar from '../components/RightSidebar/RightSidebar.astro';
 import { getLanguageFromURL } from '../util';
 import { useTranslations } from '../i18n/util';
 
-const { content = {}, hideRightSidebar = false } = Astro.props;
+const { headings = {}, content = {}, hideRightSidebar = false } = Astro.props;
 const isFallback = !!Astro.params.fallback;
 const url = new URL(Astro.request.url);
 const currentPage = url.pathname;
@@ -141,7 +141,7 @@ if (isFallback) canonicalURL.pathname = canonicalURL.pathname.replace(`/${lang}/
 				<LeftSidebar {currentPage} />
 			</aside>
 			<aside id="grid-right" class="grid-sidebar">
-				{!hideRightSidebar && <RightSidebar content={content} githubEditUrl={githubEditUrl} />}
+				{!hideRightSidebar && <RightSidebar headings={headings} content={content} githubEditUrl={githubEditUrl} />}
 			</aside>
 			<div id="grid-main" lang={isFallback && 'en'}>
 				<PageContent {content} {githubEditUrl} {currentPage} {isFallback}>
