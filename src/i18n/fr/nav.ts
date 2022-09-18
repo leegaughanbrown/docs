@@ -15,8 +15,9 @@ export default NavDictionary({
 
 	// Basics
 	framework: 'Le Framework CSS',
-	'framework/grids': 'Grids',
-	'framework/grids12': '12 Cols Grid',
+	'framework/grids': 'Grilles Simples',
+	'framework/grids12': 'Grille 12 colonnes',
+	'framework/ram': 'Grilles RAM',
 	'framework/normalize': 'Normalize',
 	'framework/colors': 'Couleurs',
 	'framework/layouts': 'Mise en page',
@@ -42,7 +43,8 @@ export default NavDictionary({
 
 	// Reference
 	reference: 'Référence',
-	'reference/layouts-props': 'Props Layouts' ,
+	'reference/12-grid-utilities': 'Classes 12-grid',
+	'reference/layouts-props': 'Props Layouts',
  	'reference/colors-props': 'Props Couleurs',
 	'reference/gradients-props': 'Props Gradients',
 	'reference/shadows-props': 'Props Ombres',

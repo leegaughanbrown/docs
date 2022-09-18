@@ -19,8 +19,9 @@ export default [
 	{ text: 'CSS Custom Properties', slug: 'core-concepts/css-custom-properties', key: 'core-concepts/css-custom-properties' },
 
 	{ text: 'CSS Framework', header: true, type: 'learn', key: 'framework' },
-	{ text: 'Grids', slug: 'framework/grids', key: 'framework/grids' },
-	{ text: '12 Cols Grid', slug: 'framework/grids12', key: 'framework/grids12' },
+	{ text: 'Basic Grids', slug: 'framework/grids', key: 'framework/grids' },
+	{ text: '12 Cols Grids', slug: 'framework/grids12', key: 'framework/grids12' },
+	{ text: 'RAM Grids', slug: 'framework/ram', key: 'framework/ram' },
 	{ text: 'Normalize', slug: 'framework/normalize', key: 'framework/normalize' },
 	{ text: 'Colors', slug: 'framework/colors', key: 'framework/colors' },
 	{ text: 'Layouts', slug: 'framework/layouts', key: 'framework/layouts' },
@@ -44,6 +45,7 @@ export default [
 	{ text: 'Stylesheets', slug: 'features/stylesheets', key: 'features/stylesheets' },
 
 	{ text: 'Reference', header: true, type: 'api', key: 'reference' },
+	{ text: '12-grid Utilities', slug: 'reference/12-grid-utilities', key: 'reference/12-grid-utilities' },
 	{ text: 'Layouts Props', slug: 'reference/layouts-props', key: 'reference/layouts-props' },
 	{ text: 'Colors Props', slug: 'reference/colors-props', key: 'reference/colors-props' },
 	{ text: 'Gradients Props', slug: 'reference/gradients-props', key: 'reference/gradients-props' },
