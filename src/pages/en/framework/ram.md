@@ -19,7 +19,7 @@ draft: true
 
 ## RAM Grids
 
-RAM grids are the most easy to use gris in the series, but also the most complex under the hood.
+RAM grids are the most easy to use grids in the series, but also the most complex under the hood.
 
 When you assign a RAM class to a container, for example the class `o-ram-5`, oxyprops will automatically:
 - Grab your site page width from the builder settings.
