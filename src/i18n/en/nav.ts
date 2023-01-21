@@ -18,12 +18,14 @@ export default [
 	{ text: 'Design Tokens', slug: 'core-concepts/design-tokens', key: 'core-concepts/design-tokens' },
 	{ text: 'CSS Custom Properties', slug: 'core-concepts/css-custom-properties', key: 'core-concepts/css-custom-properties' },
 
+	{ text: 'CSS Components', header: true, type: 'learn', key: 'components' },
+	{ text: 'Buttons', slug: 'framework/buttons', key: 'components/buttons' },
+	{ text: 'Cards', slug: 'framework/cards', key: 'components/cards' },
+
 	{ text: 'CSS Framework', header: true, type: 'learn', key: 'framework' },
 	{ text: 'Animations', slug: 'framework/animations', key: 'framework/animations' },
 	{ text: 'Aspect Ratios', slug: 'framework/aspect-ratios', key: 'framework/aspect-ratios' },
 	{ text: 'Borders', slug: 'framework/borders', key: 'framework/borders' },
-	{ text: 'Buttons', slug: 'framework/buttons', key: 'framework/buttons' },
-	{ text: 'Cards', slug: 'framework/cards', key: 'framework/cards' },
 	{ text: 'Colors', slug: 'framework/colors', key: 'framework/colors' },
 	{ text: 'Color Schemes', slug: 'framework/color-schemes', key: 'framework/color-schemes' },
 	{ text: 'Cursors', slug: 'framework/cursors', key: 'framework/cursors' },
