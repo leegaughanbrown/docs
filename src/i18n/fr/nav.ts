@@ -16,24 +16,25 @@ export default NavDictionary({
 	// Basics
 	framework: 'Le Framework CSS',
 	'framework/animations': 'Animations',
-	'framework/aspect-ratios': "Ratio d'aspect",
-	'framework/borders': 'Contours',
+	'framework/borders': 'Bordure',
 	'framework/buttons': 'Boutons',
 	'framework/cards': 'Cartes',
+	'framework/layers': 'Couches',
 	'framework/colors': 'Couleurs',
-	'framework/color-schemes': 'Thèmes Couleurs',
 	'framework/cursors': 'Curseurs',
+	'framework/color-schemes': 'Thèmes Couleurs',
 	'framework/easing': 'Amortissements',
 	'framework/gradients': 'Gradients',
 	'framework/grids': 'Grilles Simples',
 	'framework/grids12': 'Grille 12 colonnes',
 	'framework/ram': 'Grilles RAM',
-	'framework/normalize': 'Normalize',
 	'framework/layouts': 'Mise en page',
+	'framework/masks': 'Masques',
+	'framework/normalize': 'Normalize',
 	'framework/shadows': 'Ombres',
 	'framework/typography': 'Typographie',
 	'framework/sizes': 'Tailles',
-	'framework/layers': 'Calques',
+	'framework/aspect-ratios': "Ratio d'affichage",
 	'framework/media-queries': 'Requetes média',
 
 	// Features
@@ -41,9 +42,12 @@ export default NavDictionary({
 	'features/context-menu': 'Menu contextuel',
 	'features/global-colors': 'Couleurs globales',
 	'features/global-settings': 'Paramètres globaux',
-	'features/custom-elements': "Bibliothèque d'éléments",
 	'features/selectors': 'Sélecteurs',
 	'features/stylesheets': 'Feuilles de style',
+
+	// Elements
+	elements: 'Éléments',
+	'elements/light-dark-toggle': 'Bouton Clair/Sombre',
 
 	// Reference
 	reference: 'Référence',

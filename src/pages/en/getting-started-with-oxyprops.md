@@ -4,16 +4,26 @@ title: Getting Started
 description: A basic intro to OxyProps.
 i18nReady: true
 ---
-A WordPress CSS Framework  🔸  Developped for Oxygen Buidler  🔸  Saves your precious time
+WordPress CSS Framework  🔸  For Oxygen and Bricks Buidlers  🔸  Saves your precious time
 
 ## What is OxyProps?
 
-**OxyProps** is a modern CSS custom properties first CSS Framework for Oxygen Builder. It helps **freelancers** and **agencies** work faster and build consistent UI through smart and instant access to the framework right in the buidler.
+**OxyProps** is a modern CSS custom properties first CSS Framework for WordPress Page Builders. It helps **freelancers** and **agencies** work faster and build consistent UI through smart and instant access to the framework right in the buidler.
 
 It is inspired, and built on top of [Open Props](https://open-props.style), an open source collection of expertly crafted web design token, aimed at creating consistent components.
 
 Oxyprops aims to make the use of the framework as simple and intuitive as possible for the user while providing the latest CSS features.
 
+## Supported page builders
+
+When you install OxyProps on your WordPress site, OxyProps stylesheets are loaded. Therefore, the OxyProps CSS properties and utility classes will be available for any site builder accepting custom classes and CSS properties.
+
+But OxyProps was particularly designed for, and supports:
+
+- **Oxygen Builder**
+- **Bricks Builder**
+
+When you use OxyProps together with one of the supported page buidlers, you get access to builder enhancement to speed up your workflow.
 
 ## Start building with OxyProps
 

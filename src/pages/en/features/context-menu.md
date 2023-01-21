@@ -1,8 +1,8 @@
 ---
 layout: ~/layouts/MainLayout.astro
-title: Colors
-description: An intro to the OxyProps Colors properties and classes syntax.
+title: Context Menus
+description: An intro to the OxyProps Context Menus properties and classes syntax.
 i18nReady: true
 ---
 
-**OxyProps Colors** are the basic building blocks of any OxyProps project.
+**OxyProps Context Menus** are the basic building blocks of any OxyProps project.
