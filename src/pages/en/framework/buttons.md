@@ -111,7 +111,7 @@ You can add icons to your buttons using one of the following options.
 
 ### Nest an SVG in your button
 
-Using a code block (Oxygen) or a code element (Bricks), insert SVG code in your button element. THis chikd SVG on a `o-btn` class will be styled a the button icon.
+Using a code block (Oxygen) or a code element (Bricks), insert SVG code in your button element. This child SVG on a `o-btn` class will be styled as the button icon.
 
 ### Using custom CSS and data attributes
 
