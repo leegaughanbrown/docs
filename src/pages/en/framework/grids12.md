@@ -39,7 +39,7 @@ Both in Oxygen and Bricks, the classes need to "fight" with the builder defaults
 
 ## Helper Lines
 
-When creating a page layout, I like to have the 12 columns visible so I can easily know where my elemnts are placed on the grid.
+When creating a page layout, I like to have the 12 columns visible so I can easily know where my elements are placed on the grid.
 
 So, I created a specific class in the OxyProps framework to help me with this. This is the class :
 - `o-12-grid-helper-lines`
@@ -75,7 +75,7 @@ These classes will set the `grid-column` CSS property in the form `grid-column: 
 So, for example, the class `o-span-2-7` that sets `grid-column: 2 / span 7` means : *"Starts on column 2 and spreads over 7 columns"*.
 
 > pattern: `o-span-{1-12}-{1-12}`  
-> Obviously, some combinations don't exist, like `o-span-8-10`, as you can not havve an element that starts column 8 and spreads over 10 columns on a 12 columns grid.
+> Obviously, some combinations don't exist, like `o-span-8-10`, as you can not have an element that starts column 8 and spreads over 10 columns on a 12 columns grid.
 
 #### 12 columns span
 
@@ -250,7 +250,7 @@ These classes will set the `grid-row` CSS property in the form `grid-row: X / sp
 So, for example, the class `o-rspan-2-7` that sets `grid-row: 2 / span 7` means : *"Starts on row 2 and spreads over 7 rows"*.
 
 > pattern: `o-rspan-{1-12}-{1-12}`  
-> Obviously, some combinations don't exist, like `o-rspan-8-10`, as you can not havve an element that starts column 8 and spreads over 10 rows on a 12 rows grid.
+> Obviously, some combinations don't exist, like `o-rspan-8-10`, as you can not have an element that starts column 8 and spreads over 10 rows on a 12 rows grid.
 
 #### 12 rows span
 
@@ -427,7 +427,7 @@ This would be achieved with the following classes :
 - Div1 : `o-span-1-6 o-lg-span-1-12`
 - Div2 : `o-span-7-6 o-lg-span-1-12`
 
-This is an extremely basic example, and would probaably be easier to achieve by controlling the pareent containeere with classes from thee maain grid system, but you can imagine complex behaviours we can achieve with this system.
+This is an extremely basic example, and would probaably be easier to achieve by controlling the parent container with classes from the main grid system, but you can imagine complex behaviours we can achieve with this system.
 
 ### xxl Breakpoint
 
