@@ -53,21 +53,21 @@ You can check the 11 shades for your custom color in the Samples area for each o
 
 ### Check various color modes
 
-The dashboard is equipped with a color schemes switcher so you can easily see what you color selection looks like under various color schemes, especially light and dark modes.
+The dashboard is equipped with a color schemes switcher so you can easily see what your color selection looks like under various color schemes, especially light and dark modes.
 
 ## Builder Features
 
-OxyProps includes in-buidler features to simplify you life as a developer. Some of them are enables by default, some are not. Let's have a look.
+OxyProps includes in-builder features to simplify your life as a developer. Some of them are enabled by default, some are not. Let's have a look.
 
 ### OxyProps Context Menu (active by default)
 
 When you are in Oxygen editor, and want to style an element, you have access to countless input fields from the element Primary and Advanced panels.
 
-OxyProps Contect Menu equips (nearly) every Oxygen input fields with a props panel accessible from a right click in the input fields that suggests relevant framework properties or values for this specific field.
+OxyProps Context Menu equips (nearly) every Oxygen input field with a props panel accessible from a right click in the input fields that suggests relevant framework properties or values for this specific field.
 
 > 🎛 Learn more about [OxyProps context menu](/en/features/context-menu/) in our Features guide.
 
-- No need to rember exactly the framework syntax to use it.
+- No need to remember exactly the framework syntax to use it.
 - No need to search on a framework cheatsheet.
 - no need to type the full `var()` function around a long property name.
 
@@ -97,7 +97,7 @@ If you activate this option, OxyProps will replace your current Oxygen global se
 
 > ⚙️ Learn more about [OxyProps global settings](/en/features/global-settings/) in our Features guide.
 
-As this will erase your previous settings, this is not activated by default. If you want to use it, click the checkbox, click the `Save Changes` button, and then you can open Oxygen and lokk at your new global settings.
+As this will erase your previous settings, this is not activated by default. If you want to use it, click the checkbox, click the `Save Changes` button, and then you can open Oxygen and look at your new global settings.
 
 ### Global color sets (active by default)
 
@@ -122,7 +122,7 @@ You can delete these color sets:
 
 ### OxyProps Normalize (active by default)
 
-In addition to global settings, you can activate OxyProps the Normalize stylesheet.
+In addition to global settings, you can activate OxyProps with the Normalize stylesheet.
 
 Normalize is an opinionated stylesheet that uses the framework styles for all HTML elements, and is adaptive to light and dark modes.
 
@@ -136,7 +136,7 @@ The brand color is used sparingly, in the HTML elements. The link color is usefu
 
 When you activate this option, OxyProps will create an OxyProps folder in Oxygen Editor stylesheets.
 
-Inside this forlder, it will create an OxyPropsTheme stylesheet.
+Inside this folder, it will create an OxyPropsTheme stylesheet.
 
 By default, all code in the stylesheet is commented, so it is inactive.
 
@@ -146,7 +146,7 @@ In this stylesheet, you can redefine each of the logical colors for each color s
 
 ## Utility Stylesheets
 
-In order to optimize you page load speed, you may want to have control over which par of the framework you want to load depending on your use case. Why load all gradients or layers classes if you never use them, right ?
+In order to optimize you page load speed, you may want to have control over which part of the framework you want to load depending on your use case. Why load all gradients or layers classes if you never use them, right ?
 
 In this section, you can select which par of the framework you want loaded in the builder and on your site front-end.
 
