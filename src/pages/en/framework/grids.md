@@ -130,7 +130,7 @@ The width ratio is defined by the 2 values. For example, in a `o-grid-2-3` grid,
 
 These properties are set to : `xfr yfr` where x and y are the 2 fractional values.
 
-> NB: properties will equal fractional values, like `--o-grid-columns-3-3` don't exist in the OxyProps framework.
+> NB: properties with equal fractional values, like `--o-grid-columns-3-3` don't exist in the OxyProps framework.
 
 #### Usage
 
@@ -170,7 +170,7 @@ Will define a 2 columns grid, the second column being twice as wide as the first
     .o-grid-5-4
 ```
 
-> NB: utility classes will equal fractional values, like `--o-grid-2-2` don't exist in the OxyProps framework.
+> NB: utility classes with equal fractional values, like `--o-grid-2-2` don't exist in the OxyProps framework.
 
 ## Spans & Starts
 
@@ -330,7 +330,7 @@ Simple and Asymetrical grids can be combined with breakpoints to achieve a respo
 
 Use the pattern `o-{breakpoint}-grid-{type of grid}` for this.
 
-> NB: You can chain multiple classes (1 per breakpoint) to achieve you responsive layout.
+> NB: You can chain multiple classes (1 per breakpoint) to achieve a responsive layout.
 
 ### Breakpoints
 
