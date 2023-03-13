@@ -4,7 +4,7 @@ title: Design tokens
 description: What are design tokens and why use them?
 i18nReady: true
 ---
-Design tokens are design choices that ensure consistent, unified and cohesive user experiences accross your website.
+Design tokens are design choices that ensure consistent, unified and cohesive user experiences across your website.
 
 ## What are Design Tokens?
 
@@ -78,7 +78,7 @@ html {
 
 ### Component-specific design tokens
 
-Component-specific tokens are an exhaustive representation of every value associated with a component. They often inherit from alias tokens, but are named in a way that allows developpers to be as specific as possible in applying design tokens in a component (in a custom class for example).
+Component-specific tokens are an exhaustive representation of every value associated with a component. They often inherit from alias tokens, but are named in a way that allows developers to be as specific as possible in applying design tokens in a component (in a custom class for example).
 
 In the example, the `--o-btn-border-color` is a component specific design token. It is set to the `--o-links` alias design token which, itself, can be set to a global token like `--o-lime-3` depending on the context.
 
